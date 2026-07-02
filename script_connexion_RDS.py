@@ -42,7 +42,7 @@ fichiers_a_pousser = {
     'silver/referentiel_vacances.csv': 'dim_vac_scolaire'
 }
 
-def executer_scripts_sql(engine, dossier_sql="Codes_Tables_SQL_DANGER"):
+def executer_scripts_sql(engine, dossier_sql="Tables_SQL"):
     """Lit et exécute tous les fichiers .sql du dossier scripts_sql."""
     if not os.path.exists(dossier_sql):
         print(f"⚠️ Dossier '{dossier_sql}' non trouvé. Pas de vues créées.")
