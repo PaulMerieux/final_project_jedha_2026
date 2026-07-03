@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 AWS_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
-AWS_REGION = os.getenv("AWS_DEFAULT_REGION", "eu-west-3")
+AWS_REGION = os.getenv("AWS_REGION", "eu-west-3")
 BUCKET_NAME = "projet-accidents-jedha"
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
