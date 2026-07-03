@@ -7,6 +7,7 @@ if __name__ == "__main__":
     print("DÉMARRAGE DU PIPELINE COMPLET (END-TO-END)")
 
     asyncio.run(bronze_downloader.run())
+    
     main.run()
     script_connexion_RDS.run()
 
