@@ -60,7 +60,7 @@ def executer_scripts_sql(engine, dossier_sql="Tables_SQL"):
     except Exception as e:
         print(f"Erreur lors de la création des vues : {e}")
 
-def run_pipeline():
+def run():
     print(f"Début de l'automatisation vers : {DB_HOST}")
     
     try:
@@ -101,4 +101,4 @@ def run_pipeline():
         print(f"Erreur inattendue dans le pipeline : {e}")
 
 if __name__ == "__main__":
-    run_pipeline()
+    run()

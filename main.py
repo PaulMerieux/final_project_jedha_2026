@@ -85,7 +85,7 @@ def process_and_upload_silver(all_files, keyword, cleaning_func, silver_name):
     return df_silver
 
 
-def main():
+def run():
     s3 = get_s3_client()
     all_files = get_all_files(s3, BUCKET, 'bronze/BAAC/')
     print(f"📂 {len(all_files)} fichiers CSV trouvés dans bronze/")
@@ -173,4 +173,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    run()
