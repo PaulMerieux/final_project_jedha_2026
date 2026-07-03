@@ -6,12 +6,15 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+def get_s3_client():
+    """Connexion à AWS"""
+    return boto3.client('s3')
 
 def read_s3_csv(file_key, separator=';'):
 
     """Lecture d'un fichier depuis S3 et stockage dans un tableau Python"""
 
-    s3 = boto3.client('s3')
+    s3 = get_s3_client()
     bucket = "projet-accidents-jedha"
     response = s3.get_object(Bucket=bucket, Key=file_key)
 
@@ -24,7 +27,7 @@ def upload_to_s3(df, file_name, folder="silver"):
 
     """Étape 2 : Envoyer le tableau nettoyé vers S3"""
 
-    s3 = boto3.client('s3')
+    s3 = get_s3_client()
     bucket = "projet-accidents-jedha"
 
     csv_buffer = io.StringIO()
