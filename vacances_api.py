@@ -3,27 +3,29 @@ import pandas as pd
 import time
 
 
-def generer_annees_scolaires(annee_debut=2020):
-    """
-    Génère les années scolaires du type '2020-2021' depuis annee_debut, jusqu'à l'année scolaire en cours (incluse), en se basant sur la date du jour.
-    """
-    aujourd_hui = datetime.now()
-    annee_courante = aujourd_hui.year
+# def generer_annees_scolaires(annee_debut=2020):
+#     """
+#     Génère les années scolaires du type '2020-2021' depuis annee_debut, jusqu'à l'année scolaire en cours (incluse), en se basant sur la date du jour.
+#     """
+#     aujourd_hui = datetime.now()
+#     annee_courante = aujourd_hui.year
 
  
-    if aujourd_hui.month >= 8: # Si on est après juillet, l'année scolaire en cours a démarré cette année (ex: 2026-2027)
-        derniere_annee_scolaire_debut = annee_courante
-    else:
-        derniere_annee_scolaire_debut = annee_courante - 1
+#     if aujourd_hui.month >= 8: # Si on est après juillet, l'année scolaire en cours a démarré cette année (ex: 2026-2027)
+#         derniere_annee_scolaire_debut = annee_courante
+#     else:
+#         derniere_annee_scolaire_debut = annee_courante - 1
 
-    return [f"{a}-{a+1}" for a in range(annee_debut, derniere_annee_scolaire_debut + 1)]
+#     return [f"{a}-{a+1}" for a in range(annee_debut, derniere_annee_scolaire_debut + 1)]
 
 def fetch_vacances_data():
     """
     Cette fonction automatise la récupération du calendrier scolaire sur plusieurs années en interrogeant l'API officielle.
     """
     
-    annees_a_recuperer = generer_annees_scolaires(2020)
+    # annees_a_recuperer = generer_annees_scolaires(2020)
+    
+    annees_a_recuperer = ["2020-2021", "2021-2022", "2022-2023", "2023-2024", "2024-2025"]
     
     all_results = [] #pour stocker les données
     

@@ -25,7 +25,7 @@ def read_s3_csv(file_key, separator=';'):
 
 def upload_to_s3(df, file_name, folder="silver"):
 
-    """Étape 2 : Envoyer le tableau nettoyé vers S3"""
+    """Envoyer le tableau nettoyé vers S3"""
 
     s3 = get_s3_client()
     bucket = "projet-accidents-jedha"
