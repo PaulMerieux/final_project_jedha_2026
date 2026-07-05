@@ -21,9 +21,6 @@ async def download_and_upload(session, url, file_name):
                 print(f"Transfert en cours : {file_name}...")
                 content = await response.read()
                 
-                # Boto3 utilise automatiquement les variables chargées par load_dotenv()
-                # verifié que le dossier eiste bien.
-                # Ici le dossier à changé !!!
                 s3 = boto3.client('s3')
                 s3.put_object(Bucket=S3_BUCKET, Key=f"bronze/BAAC/{file_name}", Body=content)
                 
